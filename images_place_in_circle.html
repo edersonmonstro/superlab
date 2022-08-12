@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            .container {
+                display: grid;
+                grid-template-areas: "stack";
+            }
+
+            .container > img {
+                grid-area: stack;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: contain;
+                --n-angle: calc(-1 * var(--angle));
+
+                transform: 
+                    rotate(var(--angle));
+                    translate: 150px;
+                    rotate(var(--n-angle));
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <img src="images/mario.png" style="--angle: 45deg;" alt="test">
+            
+        </div>
+
+        <script type="text/javascript">
+         
+        </script>
+    </body>
+</html>
